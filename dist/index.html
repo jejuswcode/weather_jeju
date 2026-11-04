@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#eff4f0">
+  <meta name="description" content="제주의 현재 기온과 습도, 오늘의 하늘을 확인하세요.">
+  <title>지금 제주 날씨는?</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <main class="page">
+    <header class="topbar"><a class="brand" href="./" aria-label="제주 날씨 홈"><span class="brand-mark">J.</span> 제주 날씨</a><span class="edition">JEJU, RIGHT NOW</span></header>
+    <section class="intro"><p class="eyebrow">바람이 머무는 섬, 제주</p><h1>지금 제주 날씨는?</h1><p class="subtitle">제주의 하늘을, 한눈에.</p></section>
+    <section class="weather-card" aria-labelledby="location" aria-busy="false">
+      <div class="landscape" aria-hidden="true"><div class="sun"></div><div class="cloud cloud-one"></div><div class="cloud cloud-two"></div><div class="mountain mountain-back"></div><div class="mountain mountain-front"></div><div class="sea"></div><div class="coast"></div><span class="landscape-caption">한라산 너머, 오늘의 제주</span></div>
+      <div class="weather-content">
+        <div class="location-row"><h2 id="location"><span class="pin" aria-hidden="true">⌖</span> 제주특별자치도 <span>제주시 기준</span></h2><span class="badge" id="badge">연결 대기</span></div>
+        <div class="main-weather"><div class="temperature"><span id="temperature">—</span><span class="unit">°C</span></div><div class="condition"><img id="condition-icon" alt="" hidden width="64" height="64"><p id="condition">오늘의 하늘을 만나보세요</p><span>현재 기온</span></div></div>
+        <div class="details"><div><p class="detail-label"><span aria-hidden="true">♧</span> 습도</p><p class="detail-value"><span id="humidity">—</span><small> %</small></p></div><div><p class="detail-label">데이터 업데이트</p><p id="updated" class="update-value">—</p><span class="time-zone">한국 표준시 (KST)</span></div></div>
+        <div class="actions"><p id="status" role="status" aria-live="polite">날씨를 불러오는 중입니다.</p><button id="refresh" type="button"><span class="refresh-icon" aria-hidden="true">↻</span> 새로고침</button></div>
+      </div>
+    </section>
+    <details class="settings" id="settings" open><summary>WeatherAPI 연결 설정 <span aria-hidden="true">＋</span></summary><form id="key-form"><label for="api-key">WeatherAPI.com API 키</label><div class="key-row"><input id="api-key" type="password" placeholder="API 키를 입력하세요" autocomplete="off" spellcheck="false" required><button type="submit">연결하기</button></div><p>키는 이 탭의 세션에만 저장됩니다. <a href="https://www.weatherapi.com/signup.aspx" target="_blank" rel="noopener noreferrer">무료 API 키 발급 ↗</a></p></form></details>
+    <footer><span>섬의 날씨는 장소에 따라 다를 수 있어요.</span><a href="https://www.weatherapi.com/" target="_blank" rel="noopener noreferrer">Weather data by WeatherAPI.com ↗</a></footer>
+  </main>
+</body>
+</html>
